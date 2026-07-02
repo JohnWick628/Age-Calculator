@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- First Container -->
+     <div class="container">
+
+        <div class="headings">
+            <div class="heading-text">
+                <h1><span>Age</span><br>Calculator</h1>
+            </div>
+            <p class="cal-icon">
+                ------<i class="fa-solid fa-calendar fa-2xs"></i>-----
+            </p>
+            <div class="head-para">
+                <p>Enter Your Date of birth and <br>calculate your exact age.</p>
+            </div>
+            <img src="pic-1.png" alt="time-calender" width="250px">
+            <!-- Today date card -->
+             <div class="today-card effect">
+                <div class="icon">📅</div>
+                <div class="today-info">
+                    <span>Today's Date</span>
+                    <h3 id="todayDate">2 Jun 2026</h3>
+                </div>
+             </div>
+        </div>
+     </div>
+
+  <!-- Floting Container -->
+
+        <div class="floting-container">
+            <div class="input">
+                <div class="input-text">
+                    <i class="fa-solid fa-calendar fa-lg"></i>
+                    <p>Select Your Birth Date</p>
+                </div>
+                <div class="input-dates">
+                    <input type="number" id="dateIn" min="1" max="31" placeholder="DD" class="input-date">
+                    <p>/</p>
+                    <input type="number" id="monthIn" min="1" max="12" placeholder="MM" class="input-date">
+                    <p>/</p>
+                    <input type="number" id="yearIn" placeholder="YYYY" min="1900" max="2100" class="input-date">
+                </div>
+                <button id="calculateBtn"><i class="fa-solid fa-calculator fa-lg"></i> Calculate Age</button>
+            </div>
+
+            <div class="your-age">
+                <p><img src="1f382 (1).svg" alt="birthday-cake" width="21px"> Your Exact Age</p>
+            </div>
+        
+            <!-- Output Cards SEction -->
+             <div class="output-cards">
+                <div class="output-card years effect">
+                    <i class="fa-solid fa-user fa-lg"></i>
+                    <h2 id="totalYears">00</h2>
+                    <p>Years</p>
+                </div>
+                <div class="output-card months effect">
+                    <i class="fa-solid fa-calendar fa-lg"></i>
+                    <h2 id="totalMonths">00</h2>
+                    <p>Months</p>
+                </div>
+                <div class="output-card days effect">
+                    <i class="fa-solid fa-clock fa-lg"></i>
+                    <h2 id="totalDays">00</h2>
+                    <p>Days</p>
+                </div>
+                <div class="output-card hours effect">
+                    <i class="fa-solid fa-stopwatch fa-lg"></i>
+                    <h2 id="totalHours">00</h2>
+                    <p>Hours</p>
+                </div>
+             </div>
+
+
+             <div class="birthday-card effect">
+                <h2>🎉 Next Birthday</h2>
+                <h3 id="birthdayLeft">0 Days Left</h3>
+             </div>
+             <div class="copyright">
+                © 2026 Age Calculator. All rights reserved by MAS The Tech Learner 💗
+             </div>
+        </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

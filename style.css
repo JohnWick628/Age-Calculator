@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --bg-body: linear-gradient(135deg, #4f46e5, #7c3ead, #ec4899, #f97316);
+    --inner-container: #131839db;
+    --pink: #975bd6db;
+    --white: #fff;
+    --gray: #b8b8c7;
+    --card2: #373952cd;
+    --floting-container: #272d53;
+    --purple: #6d57fb;
+    --orange: #f59e0b;
+    --green: #4ade80;
+    --border: 1px solid rgba(255, 255, 255,0.126);
+    --btn-gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+
+}
+.effect:hover{
+    filter: brightness(1.25);
+}
+
+body{
+    background: var(--bg-body);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 35px;      
+}
+.container{
+    background-color: var(--inner-container);
+    border-radius: 25px;
+    padding: 2rem;
+}    
+.headings{
+    text-align: center;
+    margin-top: 3rem;
+}
+.heading-text{
+    text-transform: uppercase;
+}
+.heading-text span{
+    color: var(--pink);
+}
+.heading-text h1{
+    color: var(--white);
+}
+.cal-icon{
+    color: var(--purple);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.head-para{
+    color: var(--gray);
+    font-size: 16px;
+    margin-bottom: 1rem;             
+}
+
+/* Today Date Card */
+.today-card{
+    display: flex;
+    background-color: var(--card2);
+    border-radius: 18px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: var(--border);
+    margin-top: 1.5rem;       
+}
+.icon{
+    font-size: 2rem;
+}
+.today-info span{
+    color: var(--gray);
+    font-size: .9rem;
+}
+.today-info h3{
+    color: var(--white);
+    margin-top: 5px;
+}
+
+/* Floting Container */
+.floting-container{
+    background-color: var(--floting-container);
+    padding: 3rem;       ;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: var(--border);
+}
+.input-text{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    justify-content: center;
+    gap: 5px;
+}
+.input-dates{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem;
+}
+.input-dates p{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.input-date{
+    background-color: var(--card2);
+    color: var(--white);
+    width: 100px;
+    height: 30px;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: var(--border);
+}
+.input-date:focus{
+    outline: none;
+    border: #a855f7;
+    box-shadow: 0 0 10px rgba(168,85, 247,1);
+}
+#calculateBtn{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: var(--btn-gradient);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 8px;
+}
+#calculateBtn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(168,85, 247,0.4);
+}
+#calculateBtn:active{
+    transform: scale(0.97);
+}
+.your-age{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    color: var(--white);
+}
+.output-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    gap: 2rem;
+    margin-top: 15px;
+}
+.output-card{
+    background-color: var(--card2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    border-radius: 15px;
+    padding: 1rem;
+    border: var(--border);
+}
+.output-card h2{
+    color: var(--white);
+    margin-top: 10px;
+}
+.years p, .years i{
+    color: var(--pink);
+}
+.months p, .months i{
+    color: var(--purple);
+}
+.days p, .days i{
+    color: var(--orange);
+}
+.hours p, .hours i{
+    color: var(--green);
+}
+
+.birthday-card{
+    background: var(--card2);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--white);
+    text-align: center;
+}
+.birthday-card h3{
+    color: var(--orange);
+    margin-top: 5px;
+}
+.copyright{
+    color: var(--gray);
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+    .floting-container{
+        min-width: 300px;
+    }
+    .output-cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .input-dates{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .input-dates p{
+        display: none;
+    }
+    body{
+        padding: 2rem;
+    }
+}
